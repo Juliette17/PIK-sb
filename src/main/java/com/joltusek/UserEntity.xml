@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.joltusek.UserEntity">
+        <table name="user" schema="pik" catalog="postgres"/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="login">
+                <column name="login"/>
+            </basic>
+            <basic name="passhash">
+                <column name="passhash"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

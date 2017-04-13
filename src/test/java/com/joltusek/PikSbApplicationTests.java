@@ -20,6 +20,5 @@ public class PikSbApplicationTests {
 		assertThat(controller).isNotNull();
 	}
 
-	
 
 }

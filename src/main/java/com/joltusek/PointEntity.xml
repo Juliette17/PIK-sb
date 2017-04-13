@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.joltusek.PointEntity">
+        <table name="point" schema="pik" catalog="postgres"/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="latitude">
+                <column name="latitude" precision="-1"/>
+            </basic>
+            <basic name="longitude">
+                <column name="longitude" precision="-1"/>
+            </basic>
+            <basic name="name">
+                <column name="name" nullable="false"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
