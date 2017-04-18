@@ -12,6 +12,8 @@ public class PointEntity {
     private double latitude;
     private double longitude;
     private String name;
+    private int owner;
+    private transient UserEntity userByOwner;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -79,5 +81,14 @@ public class PointEntity {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+    @ManyToOne
+    @JoinColumn(name = "owner", referencedColumnName = "id", nullable = false)
+    public UserEntity getUserByOwner() {
+        return userByOwner;
+    }
+
+    public void setUserByOwner(UserEntity userByOwner) {
+        this.userByOwner = userByOwner;
     }
 }
